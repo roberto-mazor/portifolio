@@ -5,53 +5,99 @@ body {
     margin: 0;
     padding: 0;
 }
+
 header {
-    background-color: #1f1f1f;
     padding: 20px;
     text-align: center;
 }
-header h1 {
+
+header menu {
     color: #bb86fc;
 }
+
+.menu {
+    background-color: #1f1f1f;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.menu a {
+    color: #bb86fc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #ffffff;
+}
+
+
+
 section {
     padding: 20px;
 }
+
 .hero {
     text-align: center;
     padding: 50px 20px;
 }
+
 .hero h2 {
     color: #bb86fc;
 }
+
 .hero img {
     border-radius: 50%;
     width: 150px;
     height: 150px;
 }
+
 .links-rapidos a {
     color: #bb86fc;
     margin: 0 10px;
     text-decoration: none;
 }
-.projetos, .experiencia, .contato {
+
+.projetos,
+.experiencia,
+.contato {
     background-color: #1f1f1f;
     margin: 20px 0;
     padding: 20px;
 }
-.projetos h2, .experiencia h2, .contato h2 {
+
+.projetos h2,
+.experiencia h2,
+.contato h2 {
     color: #bb86fc;
 }
+
 .projeto-item {
     margin: 10px 0;
 }
+
 .projeto-item h3 {
     color: #bb86fc;
 }
+
 footer {
     background-color: #1f1f1f;
     text-align: center;
     padding: 10px;
 }
+
 footer p {
     margin: 0;
 }
