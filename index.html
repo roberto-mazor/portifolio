@@ -76,21 +76,30 @@
             <h2>Experiência / Formação</h2>
             <p>Detalhes sobre suas experiências profissionais e formação.</p>
         </section>
-        <section class="contato">
-            <h2>Contato</h2>
-            <form>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+        <section class="contato" id="contato">
+            <div class="container">
+                <h2>Contato</h2>
+                <form id="contact-form">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                    <button type="submit">Enviar via WhatsApp</button>
+                </form>
+                <div class="social-links">
+                    <a href="https://github.com/seu-usuario" target="_blank">
+                        <img src="images/github-icon.png" alt="GitHub">
+                    </a>
+                    <a href="https://linkedin.com/in/seu-usuario" target="_blank">
+                        <img src="images/linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                </div>
+            </div>
         </section>
-        <footer>
             <p>&copy; 2023 Portfólio de Programador Front-End. Todos os direitos
                 reservados.</p>
         </footer>
+
+        <script src="scripts.js"></script>
     </body>
 </html>
