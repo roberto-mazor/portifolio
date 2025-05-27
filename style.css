@@ -104,19 +104,76 @@ section {
     }
 }
 
-.projetos,
-.experiencia,
 .contato {
-    background-color: #1f1f1f;
-    margin: 20px 0;
-    padding: 20px;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
 }
 
-.projetos h2,
-.experiencia h2,
 .contato h2 {
     color: #bb86fc;
+    font-size: 2em;
+    margin-bottom: 20px;
 }
+
+.contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contato label {
+    display: block;
+    margin-bottom: 5px;
+    color: #bb86fc;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+}
+
+.contato button {
+    background-color: #bb86fc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contato button:hover {
+    background-color: white;
+    color: #121212;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+}
+
 
 .projetos {
     background-color: #121212;
