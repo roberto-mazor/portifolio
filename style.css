@@ -70,6 +70,40 @@ section {
     text-decoration: none;
 }
 
+.sobre-mim {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sobre-mim h2 {
+    color: #bb86fc;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.sobre-mim p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ccc;
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .projetos,
 .experiencia,
 .contato {
@@ -101,3 +135,4 @@ footer {
 footer p {
     margin: 0;
 }
+
