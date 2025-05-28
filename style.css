@@ -118,6 +118,180 @@ section {
     }
 }
 
+.formacao {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.formacao h2 {
+    color: #bb86fc;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.formacao .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.formacao .curso {
+    position: relative;
+    background-color: rgba(30, 30, 30, 0.95); /* fundo escuro opaco */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.formacao .curso:hover {
+    color: white; /* cor da fonte ao passar o mouse */
+}
+
+.formacao .curso::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #bb86fc, #6200ea, #bb86fc);
+    background-size: 400% 400%;
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: borderGradient 5s linear infinite;
+}
+
+.formacao .curso:hover::before {
+    opacity: 1;
+}
+
+.formacao .curso h3 {
+    color: #bb86fc;
+    transition: color 0.3s ease;
+}
+
+.formacao .curso:hover h3 {
+    color: white;
+}
+
+@keyframes borderGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+@keyframes borderGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.experiencia {
+    background-color: #121212;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.experiencia h2 {
+    color: #bb86fc;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.experiencia .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.experiencia .card {
+    position: relative;
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.experiencia .card:hover {
+    color: white;
+}
+
+.experiencia .card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #bb86fc, #6200ea, #bb86fc);
+    background-size: 400% 400%;
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: borderGradient 5s linear infinite;
+}
+
+.experiencia .card:hover::before {
+    opacity: 1;
+}
+
+.experiencia .card h3 {
+    color: #bb86fc;
+    transition: color 0.3s ease;
+}
+
+.experiencia .card:hover h3 {
+    color: white;
+}
+
+@keyframes borderGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
 .contato {
     background-color: #1e1e1e;
     color: white;
@@ -264,6 +438,55 @@ section {
         align-items: center;
     }
 }
+
+.projetos .card {
+    position: relative;
+    background-color: rgba(30, 30, 30, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    z-index: 1;
+    color: #ccc;
+    transition: color 0.3s ease;
+}
+
+.projetos .card:hover {
+    color: white;
+}
+
+.projetos .card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #bb86fc, #6200ea, #bb86fc);
+    background-size: 400% 400%;
+    border-radius: 12px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: borderGradient 5s linear infinite;
+}
+
+.projetos .card:hover::before {
+    opacity: 1;
+}
+
+.projetos .card h3 {
+    color: #bb86fc;
+    transition: color 0.3s ease;
+}
+
+.projetos .card:hover h3 {
+    color: white;
+}
+
 
 footer {
     background-color: #1f1f1f;
