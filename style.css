@@ -39,30 +39,23 @@ header menu {
     transition: color 0.3s;
 }
 
-.menu a:hover {
+.menu a:hover,
+.menu a:focus {
     color: #ffffff;
+    outline: none;
 }
-
-
 
 section {
     padding: 20px;
 }
 
 .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),8 url('images/gb-image.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/gb-image.jpeg');
     background-size: cover;
-    /* cobre toda a área */
     background-position: center;
-    /* centraliza a imagem */
     background-repeat: no-repeat;
     height: 400px;
-    /* ajuste conforme necessário */
     width: 100%;
-
-}
-
-.hero {
     text-align: center;
     padding: 50px 20px;
 }
@@ -111,7 +104,6 @@ section {
         transform: translateY(20px);
         opacity: 0;
     }
-
     to {
         transform: translateY(0);
         opacity: 1;
@@ -140,7 +132,7 @@ section {
 
 .formacao .curso {
     position: relative;
-    background-color: rgba(30, 30, 30, 0.95); /* fundo escuro opaco */
+    background-color: rgba(30, 30, 30, 0.95);
     padding: 20px;
     border-radius: 10px;
     width: 100%;
@@ -154,7 +146,7 @@ section {
 }
 
 .formacao .curso:hover {
-    color: white; /* cor da fonte ao passar o mouse */
+    color: white;
 }
 
 .formacao .curso::before {
@@ -185,19 +177,6 @@ section {
 .formacao .curso:hover h3 {
     color: white;
 }
-
-@keyframes borderGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 
 @keyframes borderGradient {
     0% {
@@ -279,19 +258,6 @@ section {
     color: white;
 }
 
-@keyframes borderGradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-
 .contato {
     background-color: #1e1e1e;
     color: white;
@@ -338,9 +304,11 @@ section {
     transition: background 0.3s;
 }
 
-.contato button:hover {
+.contato button:hover,
+.contato button:focus {
     background-color: white;
     color: #121212;
+    outline: none;
 }
 
 .social-links {
@@ -361,7 +329,6 @@ section {
 .social-links img:hover {
     transform: scale(1.1);
 }
-
 
 .projetos {
     background-color: #121212;
@@ -422,71 +389,38 @@ section {
     border-radius: 0 0 10px 10px;
 }
 
-.projetos .card a:hover {
+.projetos .card a:hover,
+.projetos .card a:focus {
     background-color: white;
     color: #121212;
+    outline: none;
 }
 
 .projetos .card:hover {
     transform: translateY(-10px);
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
+    .menu li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: auto;
+        padding: 30px 10px;
+    }
+
+    .hero img {
+        width: 100px;
+        height: 100px;
+    }
+
     .projetos .container {
         flex-direction: column;
         align-items: center;
     }
 }
-
-.projetos .card {
-    position: relative;
-    background-color: rgba(30, 30, 30, 0.95);
-    padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 300px;
-    text-align: left;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    z-index: 1;
-    color: #ccc;
-    transition: color 0.3s ease;
-}
-
-.projetos .card:hover {
-    color: white;
-}
-
-.projetos .card::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, #bb86fc, #6200ea, #bb86fc);
-    background-size: 400% 400%;
-    border-radius: 12px;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    animation: borderGradient 5s linear infinite;
-}
-
-.projetos .card:hover::before {
-    opacity: 1;
-}
-
-.projetos .card h3 {
-    color: #bb86fc;
-    transition: color 0.3s ease;
-}
-
-.projetos .card:hover h3 {
-    color: white;
-}
-
 
 footer {
     background-color: #1f1f1f;
