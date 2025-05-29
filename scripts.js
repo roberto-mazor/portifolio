@@ -1,12 +1,12 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const btn = document.querySelector('.btn');
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         alert('Button clicked!');
     });
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const cards = document.querySelectorAll('.projetos .card');
     cards.forEach(card => {
         card.addEventListener('mouseover', () => {
@@ -18,10 +18,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
+
     const nome = document.getElementById('nome').value;
     const mensagem = document.getElementById('mensagem').value;
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=seu-numero&text=Nome:%20${encodeURIComponent(nome)}%0AMensagem:%20${encodeURIComponent(mensagem)}`;
-    window.open(whatsappUrl, '_blank');
+
+    const texto = `Olá, meu nome é ${nome}. Mensagem: ${mensagem}`;
+    const numero = '5519983235064'; // Substitua pelo seu número com DDI e DDD
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, '_blank');
 });
+
+
