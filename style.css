@@ -9,22 +9,37 @@ body {
 header {
     padding: 20px;
     text-align: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1f1f1f;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* garante que fique na frente do banner */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
 }
 
 header menu {
     color: #bb86fc;
+
 }
 
 .menu {
     background-color: #1f1f1f;
     padding: 10px 0;
     text-align: center;
+
+
 }
 
 .menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
+
 }
 
 .menu li {
@@ -118,6 +133,7 @@ section {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -181,9 +197,8 @@ section {
     opacity: 0;
 }
 
-.icon img {
-    width: 80px;
-    height: 80px;
+.icon i {
+    font-size: 43px;
     margin-bottom: 10px;
 }
 
@@ -197,6 +212,7 @@ section {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -207,6 +223,7 @@ section {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -275,7 +292,7 @@ section {
 }
 
 .timeline-item:nth-child(even) {
-    left: 50%;
+    left: 42.5%;
 }
 
 .timeline-item .timeline-icon {
@@ -416,6 +433,12 @@ section {
 .form-group {
     margin-bottom: 20px;
     max-width: 500px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.form-group label{
+    padding-bottom: 2rem;
 }
 
 .input-icon {
@@ -444,13 +467,24 @@ section {
 }
 
 .contato button {
-    background-color: #bb86fc;
+    /*background-color: #bb86fc;
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    margin-top: 50px;
+    margin-bottom: 20px;*/
+    display: inline-block;
+    background-color: #bb86fc;
+    color: #ffffff;
+    margin-top: 30px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .contato button:hover {
@@ -458,24 +492,6 @@ section {
     color: #121212;
 }
 
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.social-links img {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-.social-links img:hover {
-    transform: scale(1.1);
-}
 
 .form-feedback {
     margin-top: 20px;
@@ -483,13 +499,37 @@ section {
     font-size: 1.2em;
 }
 
+.social-links {
+    margin-top: 20px;
+    font-size: 37px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+    color: #bb86fc;
+
+}
+
+.social-links i {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.social-links i:hover {
+    transform: scale(1.1);
+}
+
+
+
 @media (max-width: 768px) {
     .input-icon {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .input-icon img {
+    .input-icon i {
         margin-bottom: 10px;
     }
 }
@@ -497,6 +537,7 @@ section {
 
 .social-links {
     margin-top: 20px;
+
 }
 
 .social-links a {
@@ -504,13 +545,13 @@ section {
     display: inline-block;
 }
 
-.social-links img {
+.social-links i {
     width: 40px;
     height: 40px;
     transition: transform 0.3s;
 }
 
-.social-links img:hover {
+.social-links i:hover {
     transform: scale(1.1);
 }
 
@@ -606,6 +647,7 @@ section {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
