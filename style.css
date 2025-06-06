@@ -7,77 +7,77 @@ body {
 }
 
 header {
-    padding: 20px;
-    text-align: center;
+    padding: 20px; /* Espaçamento interno (será sobrescrito pela próxima linha) */
+    text-align: center; /* Centraliza o conteúdo dentro do header */
 
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #1f1f1f;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000; /* garante que fique na frente do banner */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: fixed; /* Fixa o header no topo da página */
+    top: 0;          /* Alinha ao topo */
+    left: 0;         /* Alinha à esquerda */
+    width: 100%;     /* Ocupa toda a largura da tela */
 
+    background-color: #1f1f1f; /* Cor de fundo escura */
+    padding: 10px 0;           /* Substitui o padding anterior: 10px em cima e embaixo, 0 nas laterais */
+    text-align: center;        /* (Repetido) Centraliza o conteúdo */
+
+    z-index: 1000; /* Garante que o header fique acima de outros elementos, como banners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidade */
 }
 
 header menu {
-    color: #bb86fc;
-
+    color: #bb86fc; /* Define a cor do texto dentro do elemento <menu> (caso esteja sendo usado) */
 }
 
+
+
 .menu {
-    background-color: #1f1f1f;
-    padding: 10px 0;
-    text-align: center;
-
-
+    background-color: #1f1f1f; /* Cor de fundo do menu */
+    padding: 10px 0;           /* Espaçamento vertical interno */
+    text-align: center;        /* Centraliza os itens do menu */
 }
 
 .menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
+    list-style: none; /* Remove os marcadores padrão da lista */
+    margin: 0;         /* Remove margens padrão */
+    padding: 0;        /* Remove preenchimento padrão */
 }
 
 .menu li {
-    display: inline;
-    margin: 0 15px;
+    display: inline;   /* Exibe os itens da lista na mesma linha */
+    margin: 0 15px;    /* Espaçamento horizontal entre os itens */
 }
 
 .menu a {
-    color: #bb86fc;
-    text-decoration: none;
-    font-weight: bold;
-    position: relative;
-    transition: color 0.3s;
+    color: #bb86fc;           /* Cor do texto dos links */
+    text-decoration: none;    /* Remove o sublinhado padrão */
+    font-weight: bold;        /* Deixa o texto em negrito */
+    position: relative;       /* Necessário para posicionar o ::after corretamente */
+    transition: color 0.3s;   /* Transição suave na mudança de cor */
 }
 
 .menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px; /* Ajuste conforme o espaçamento desejado */
-    width: 100%;
-    height: 2px;
-    background-color: #bb86fc;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
+    content: "";                  /* Cria um elemento visual vazio */
+    position: absolute;           /* Posiciona em relação ao link */
+    left: 0;                      /* Alinha à esquerda do link */
+    bottom: -3px;                 /* Posiciona um pouco abaixo do texto */
+    width: 100%;                  /* Ocupa toda a largura do link */
+    height: 2px;                  /* Espessura da linha */
+    background-color: #bb86fc;   /* Cor da linha (igual à cor original do link) */
+    transform: scaleX(0);         /* Começa invisível (sem largura) */
+    transform-origin: left;       /* A animação começa da esquerda */
+    transition: transform 0.3s ease; /* Animação suave ao expandir */
 }
 
 .menu a:hover::after,
 .menu a:focus::after {
-    transform: scaleX(1);
+    transform: scaleX(1); /* Expande a linha ao passar o mouse ou focar */
 }
 
 .menu a:hover,
 .menu a:focus {
-    color: #ffffff;
-    outline: none;
+    color: #ffffff; /* Muda a cor do texto ao passar o mouse ou focar */
+    outline: none;  /* Remove o contorno ao focar com teclado */
 }
+
 
 
 section {
@@ -86,239 +86,239 @@ section {
 
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/gb-image.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: #ffffff;
+    /* Aplica uma imagem de fundo com um gradiente escuro por cima para melhorar a legibilidade do texto */
+
+    background-size: cover;        /* Faz a imagem cobrir toda a área da seção */
+    background-position: center;  /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+
+    height: 100vh; /* Ocupa 100% da altura da janela do navegador */
+
+    display: flex;               /* Usa Flexbox para centralizar o conteúdo */
+    justify-content: center;    /* Centraliza horizontalmente */
+    align-items: center;        /* Centraliza verticalmente */
+    text-align: center;         /* Centraliza o texto */
+    color: #ffffff;             /* Cor padrão do texto dentro da seção */
 }
 
 .hero-content {
-    animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out; /* Aplica uma animação de entrada suave */
 }
 
 .hero h2 {
-    color: #bb86fc;
-    font-size: 2.5em;
-    margin-bottom: 20px;
+    color: #bb86fc;         /* Cor roxa para o título */
+    font-size: 2.5em;       /* Tamanho grande para destaque */
+    margin-bottom: 20px;    /* Espaço abaixo do título */
 }
 
 .hero img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
+    border-radius: 50%;     /* Deixa a imagem redonda */
+    width: 150px;           /* Largura da imagem */
+    height: 150px;          /* Altura da imagem */
+    margin-bottom: 20px;    /* Espaço abaixo da imagem */
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.2em;       /* Tamanho da fonte do parágrafo */
+    margin-bottom: 20px;    /* Espaço abaixo do parágrafo */
 }
 
+
 .links-rapidos a {
-    color: #bb86fc;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    color: #bb86fc;             /* Cor roxa para os links */
+    margin: 0 10px;             /* Espaçamento horizontal entre os links */
+    text-decoration: none;     /* Remove o sublinhado padrão */
+    font-weight: bold;         /* Deixa o texto em negrito */
+    transition: color 0.3s;    /* Transição suave na mudança de cor */
 }
 
 .links-rapidos a:hover {
-    color: #ffffff;
+    color: #ffffff;            /* Muda a cor do link ao passar o mouse */
 }
 
 .cta-button {
-    display: inline-block;
-    background-color: #bb86fc;
-    color: #121212;
-    margin-top: 30px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;                     /* Permite aplicar padding e margens */
+    background-color: #bb86fc;                 /* Cor de fundo roxa */
+    color: #121212;                            /* Cor do texto (preto escuro) */
+    margin-top: 30px;                          /* Espaço acima do botão */
+    padding: 10px 20px;                        /* Espaçamento interno */
+    border-radius: 5px;                        /* Bordas arredondadas */
+    text-decoration: none;                     /* Remove sublinhado */
+    font-weight: bold;                         /* Texto em negrito */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves de cor */
 }
 
 .cta-button:hover {
-    background-color: #ffffff;
-    color: #121212;
+    background-color: #ffffff; /* Cor de fundo ao passar o mouse */
+    color: #121212;            /* Cor do texto permanece escura */
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-20px);
+        opacity: 0;                  /* Começa invisível */
+        transform: translateY(-20px);/* Levemente acima da posição final */
     }
 
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1;                  /* Totalmente visível */
+        transform: translateY(0);    /* Volta à posição original */
     }
 }
 
 
-.links-rapidos a {
-    color: #bb86fc;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
 .sobre-mim {
-    background-color: #1e1e1e;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: white;              /* Cor padrão do texto */
+    padding: 60px 20px;        /* Espaçamento interno (topo/baixo e laterais) */
+    text-align: center;        /* Centraliza o conteúdo */
 }
 
 .sobre-mim h2 {
-    color: #bb86fc;
-    font-size: 2em;
-    margin-bottom: 20px;
+    color: #bb86fc;        /* Cor roxa para o título */
+    font-size: 2em;        /* Tamanho do título */
+    margin-bottom: 20px;   /* Espaço abaixo do título */
 }
 
 .sobre-mim-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+    display: flex;             /* Usa Flexbox para organizar os elementos */
+    flex-wrap: wrap;           /* Permite que os itens quebrem linha em telas menores */
+    justify-content: center;   /* Centraliza os itens horizontalmente */
+    align-items: center;       /* Alinha os itens verticalmente */
+    gap: 40px;                 /* Espaço entre os elementos */
 }
 
 .sobre-mim-text {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-    text-align: left;
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
+    flex: 1;                        /* Ocupa o espaço disponível */
+    min-width: 300px;              /* Largura mínima para responsividade */
+    max-width: 600px;              /* Largura máxima para limitar o texto */
+    text-align: left;              /* Alinha o texto à esquerda */
+    animation: fadeInUp 1s ease forwards; /* Animação de entrada */
+    opacity: 0;                    /* Começa invisível (será animado) */
 }
 
 .sobre-mim p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #ccc;
-    margin-bottom: 20px;
+    font-size: 1.1em;         /* Tamanho da fonte dos parágrafos */
+    line-height: 1.6;         /* Espaçamento entre linhas */
+    color: #ccc;              /* Cor cinza clara para o texto */
+    margin-bottom: 20px;      /* Espaço abaixo dos parágrafos */
 }
 
 .sobre-mim-icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: flex;            /* Flexbox para os ícones */
+    flex-wrap: wrap;          /* Permite quebra de linha */
+    justify-content: center;  /* Centraliza os ícones */
+    gap: 20px;                /* Espaço entre os ícones */
 }
 
 .icon {
-    text-align: center;
-    animation: fadeIn 1s ease forwards;
-    opacity: 0;
+    text-align: center;             /* Centraliza o conteúdo do ícone */
+    animation: fadeIn 1s ease forwards; /* Animação de entrada */
+    opacity: 0;                     /* Começa invisível */
 }
 
 .icon i {
-    font-size: 43px;
-    margin-bottom: 10px;
+    font-size: 43px;         /* Tamanho do ícone */
+    margin-bottom: 10px;     /* Espaço abaixo do ícone */
 }
 
 .icon p {
-    color: #bb86fc;
-    font-size: 1em;
+    color: #bb86fc;          /* Cor roxa para o texto abaixo do ícone */
+    font-size: 1em;          /* Tamanho da fonte */
 }
+
 
 @keyframes fadeInUp {
     from {
-        transform: translateY(20px);
-        opacity: 0;
+        transform: translateY(20px); /* Começa deslocado para baixo */
+        opacity: 0;                  /* Invisível no início */
     }
 
     to {
-        transform: translateY(0);
-        opacity: 1;
+        transform: translateY(0);    /* Volta à posição original */
+        opacity: 1;                  /* Totalmente visível */
     }
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0;
+        opacity: 0; /* Começa invisível */
     }
 
     to {
-        opacity: 1;
+        opacity: 1; /* Fica visível */
     }
 }
 
 @media (max-width: 768px) {
     .sobre-mim-content {
-        flex-direction: column;
+        flex-direction: column; /* Empilha os elementos verticalmente em telas menores */
     }
 }
 
 
 .formacao {
-    background-color: #1e1e1e;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: white;              /* Cor padrão do texto */
+    padding: 60px 20px;        /* Espaçamento interno */
+    text-align: center;        /* Centraliza o conteúdo */
 }
 
 .formacao h2 {
-    color: #bb86fc;
-    font-size: 2em;
-    margin-bottom: 40px;
+    color: #bb86fc;        /* Cor roxa para o título */
+    font-size: 2em;        /* Tamanho do título */
+    margin-bottom: 40px;   /* Espaço abaixo do título */
 }
 
 .timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
+    position: relative;       /* Necessário para posicionar a linha central */
+    max-width: 800px;         /* Largura máxima da timeline */
+    margin: 0 auto;           /* Centraliza horizontalmente */
+    padding: 20px 0;          /* Espaçamento vertical */
 }
 
 .timeline::after {
-    content: '';
+    content: '';              /* Cria a linha vertical central */
     position: absolute;
     width: 6px;
-    background-color: #bb86fc;
+    background-color: #bb86fc; /* Cor da linha */
     top: 0;
     bottom: 0;
-    left: 50%;
-    margin-left: -3px;
+    left: 50%;                /* Centraliza horizontalmente */
+    margin-left: -3px;        /* Compensa metade da largura da linha */
 }
 
 .timeline-item {
     padding: 20px 30px;
     position: relative;
     background-color: inherit;
-    width: 50%;
+    width: 50%;               /* Cada item ocupa metade da largura */
 }
 
 .timeline-item::after {
-    content: '';
+    content: '';              /* Cria o ponto na linha central */
     position: absolute;
     width: 25px;
     height: 25px;
-    right: -17px;
+    right: -17px;             /* Posiciona o ponto à direita do item */
     background-color: white;
     border: 4px solid #bb86fc;
     top: 15px;
-    border-radius: 50%;
+    border-radius: 50%;       /* Deixa o ponto circular */
     z-index: 1;
 }
 
 .timeline-item:nth-child(odd) {
-    left: 0;
+    left: 0;                  /* Itens ímpares à esquerda */
 }
 
 .timeline-item:nth-child(even) {
-    left: 42.5%;
+    left: 42.5%;              /* Itens pares à direita (ajustado para centralizar) */
 }
 
 .timeline-item .timeline-icon {
     position: absolute;
     top: 15px;
-    left: -60px;
+    left: -60px;              /* Posiciona o ícone à esquerda do item */
     width: 50px;
     height: 50px;
     background-color: #bb86fc;
@@ -335,374 +335,340 @@ section {
 
 .timeline-item .timeline-content {
     padding: 20px 30px;
-    background-color: #333;
+    background-color: #333;   /* Fundo escuro para o conteúdo */
     position: relative;
     border-radius: 6px;
 }
 
 .timeline-item .timeline-content h3 {
-    color: #bb86fc;
+    color: #bb86fc;           /* Cor roxa para os títulos */
     margin-top: 0;
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .timeline-item {
-        width: 100%;
-        padding-left: 70px;
+        width: 100%;              /* Ocupa toda a largura */
+        padding-left: 70px;       /* Espaço para o ícone à esquerda */
         padding-right: 25px;
     }
 
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
-        left: 0;
+        left: 0;                  /* Todos os itens ficam alinhados à esquerda */
     }
 
     .timeline-item::after {
-        left: 60px;
+        left: 60px;               /* Reposiciona o ponto da linha */
     }
 
     .timeline::after {
-        left: 60px;
+        left: 60px;               /* Reposiciona a linha central */
     }
 
     .timeline-item .timeline-icon {
-        left: 10px;
+        left: 10px;               /* Reposiciona o ícone */
     }
 }
+
 
 
 
 
 .experiencia {
-    background-color: #121212;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+    background-color: #121212; /* Cor de fundo escura */
+    color: white;              /* Cor padrão do texto */
+    padding: 60px 20px;        /* Espaçamento interno */
+    text-align: center;        /* Centraliza o conteúdo */
 }
 
 .experiencia h2 {
-    color: #bb86fc;
-    font-size: 2em;
-    margin-bottom: 40px;
+    color: #bb86fc;        /* Cor roxa para o título */
+    font-size: 2em;        /* Tamanho do título */
+    margin-bottom: 40px;   /* Espaço abaixo do título */
 }
 
 .exp-card {
-    display: flex;
-    align-items: flex-start;
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    max-width: 800px;
+    display: flex;                         /* Layout em linha para ícone e conteúdo */
+    align-items: flex-start;              /* Alinha os itens ao topo */
+    background-color: #1e1e1e;            /* Fundo escuro para o card */
+    border-radius: 10px;                  /* Bordas arredondadas */
+    padding: 20px;                        /* Espaçamento interno */
+    margin-bottom: 20px;                  /* Espaço entre os cards */
+    max-width: 800px;                     /* Largura máxima */
     margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    margin-right: auto;                   /* Centraliza horizontalmente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    transition: transform 0.3s ease;      /* Animação suave ao passar o mouse */
 }
 
 .exp-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Eleva o card levemente ao passar o mouse */
 }
 
 .exp-icon {
-    flex-shrink: 0;
-    margin-right: 20px;
+    flex-shrink: 0;           /* Impede que o ícone encolha */
+    margin-right: 20px;       /* Espaço entre o ícone e o conteúdo */
 }
 
 .exp-icon img {
-    width: 50px;
-    height: 50px;
+    width: 50px;              /* Largura do ícone */
+    height: 50px;             /* Altura do ícone */
 }
 
 .exp-content h3 {
-    color: #bb86fc;
-    margin-top: 0;
+    color: #bb86fc;           /* Cor roxa para o título da experiência */
+    margin-top: 0;            /* Remove margem superior */
 }
 
 .exp-content p {
-    color: #ccc;
-    margin: 5px 0;
+    color: #ccc;              /* Cor cinza clara para o texto */
+    margin: 5px 0;            /* Espaçamento vertical entre parágrafos */
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
     .exp-card {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: column;  /* Empilha ícone e conteúdo verticalmente */
+        align-items: center;     /* Centraliza os itens */
+        text-align: center;      /* Centraliza o texto */
     }
 
     .exp-icon {
-        margin-bottom: 15px;
+        margin-bottom: 15px;     /* Espaço abaixo do ícone */
     }
 }
 
 
 .contato {
-    background-color: #1e1e1e;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: white;              /* Cor padrão do texto */
+    padding: 60px 20px;        /* Espaçamento interno */
+    text-align: center;        /* Centraliza o conteúdo */
 }
 
 .contato h2 {
-    color: #bb86fc;
-    font-size: 2em;
-    margin-bottom: 20px;
+    color: #bb86fc;        /* Cor roxa para o título */
+    font-size: 2em;        /* Tamanho do título */
+    margin-bottom: 20px;   /* Espaço abaixo do título */
 }
 
 .form-group {
-    margin-bottom: 20px;
-    max-width: 500px;
-    margin: 0 auto;
-    padding-top: 30px;
+    margin-bottom: 20px;   /* Espaço entre os grupos de formulário */
+    max-width: 500px;      /* Largura máxima do formulário */
+    margin: 0 auto;        /* Centraliza horizontalmente */
+    padding-top: 30px;     /* Espaço acima do grupo */
 }
 
-.form-group label{
-    padding-bottom: 2rem;
+.form-group label {
+    padding-bottom: 2rem;  /* Espaço abaixo do rótulo */
 }
 
 .input-icon {
-    display: flex;
-    align-items: center;
-    background-color: #333;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 0 auto;
+    display: flex;               /* Layout em linha para ícone e campo */
+    align-items: center;         /* Alinha verticalmente */
+    background-color: #333;      /* Fundo escuro para o campo */
+    border-radius: 5px;          /* Bordas arredondadas */
+    padding: 10px;               /* Espaçamento interno */
+    margin: 0 auto;              /* Centraliza horizontalmente */
 }
 
 .input-icon img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
+    width: 20px;         /* Largura do ícone */
+    height: 20px;        /* Altura do ícone */
+    margin-right: 10px;  /* Espaço entre o ícone e o campo */
 }
 
 .input-icon input,
 .input-icon textarea {
-    width: 100%;
-    border: none;
-    background: none;
-    color: white;
-    padding: 10px;
-    outline: none;
+    width: 100%;         /* Ocupa toda a largura disponível */
+    border: none;        /* Remove borda padrão */
+    background: none;    /* Fundo transparente */
+    color: white;        /* Cor do texto */
+    padding: 10px;       /* Espaçamento interno */
+    outline: none;       /* Remove contorno ao focar */
 }
 
 .contato button {
-    /*background-color: #bb86fc;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 50px;
-    margin-bottom: 20px;*/
-    display: inline-block;
-    background-color: #bb86fc;
-    color: #ffffff;
-    margin-top: 30px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;                     /* Permite aplicar padding e margens */
+    background-color: #bb86fc;                 /* Cor de fundo roxa */
+    color: #ffffff;                            /* Cor do texto */
+    margin-top: 30px;                          /* Espaço acima do botão */
+    padding: 10px 20px;                        /* Espaçamento interno */
+    border-radius: 5px;                        /* Bordas arredondadas */
+    text-decoration: none;                     /* Remove sublinhado */
+    font-weight: bold;                         /* Texto em negrito */
+    transition: background-color 0.3s, color 0.3s; /* Transições suaves */
 }
 
 .contato button:hover {
-    background-color: white;
-    color: #121212;
+    background-color: white;   /* Cor de fundo ao passar o mouse */
+    color: #121212;            /* Cor do texto ao passar o mouse */
 }
-
 
 .form-feedback {
-    margin-top: 20px;
-    color: #bb86fc;
-    font-size: 1.2em;
+    margin-top: 20px;      /* Espaço acima da mensagem de feedback */
+    color: #bb86fc;        /* Cor roxa */
+    font-size: 1.2em;      /* Tamanho da fonte */
 }
 
+
 .social-links {
-    margin-top: 20px;
-    font-size: 37px;
+    margin-top: 20px;       /* Espaço acima dos ícones sociais */
+    font-size: 37px;        /* Tamanho base dos ícones */
 }
 
 .social-links a {
-    margin: 0 10px;
-    display: inline-block;
-    color: #bb86fc;
-
+    margin: 0 10px;         /* Espaço horizontal entre os links */
+    display: inline-block;  /* Permite aplicar margens e efeitos */
+    color: #bb86fc;         /* Cor roxa dos ícones */
 }
 
 .social-links i {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
+    width: 40px;            /* Largura do ícone */
+    height: 40px;           /* Altura do ícone */
+    transition: transform 0.3s; /* Animação suave ao passar o mouse */
 }
 
 .social-links i:hover {
-    transform: scale(1.1);
+    transform: scale(1.1);  /* Aumenta levemente o ícone no hover */
 }
 
-
-
+/* Responsividade para campos de entrada com ícones */
 @media (max-width: 768px) {
     .input-icon {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column;     /* Empilha ícone e campo verticalmente */
+        align-items: flex-start;    /* Alinha à esquerda */
     }
 
     .input-icon i {
-        margin-bottom: 10px;
+        margin-bottom: 10px;        /* Espaço abaixo do ícone */
     }
 }
 
-
-.social-links {
-    margin-top: 20px;
-
-}
-
-.social-links a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-.social-links i {
-    width: 40px;
-    height: 40px;
-    transition: transform 0.3s;
-}
-
-.social-links i:hover {
-    transform: scale(1.1);
-}
-
 .projetos {
-    background-color: #121212;
-    color: white;
-    padding: 60px 20px;
-    text-align: center;
+    background-color: #121212; /* Cor de fundo escura */
+    color: white;              /* Cor padrão do texto */
+    padding: 60px 20px;        /* Espaçamento interno */
+    text-align: center;        /* Centraliza o conteúdo */
 }
 
 .projetos h2 {
-    color: #bb86fc;
-    font-size: 2em;
-    margin-bottom: 40px;
+    color: #bb86fc;        /* Cor roxa para o título */
+    font-size: 2em;        /* Tamanho do título */
+    margin-bottom: 40px;   /* Espaço abaixo do título */
 }
 
 .projetos .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    display: flex;             /* Layout flexível para os cards */
+    flex-wrap: wrap;           /* Permite quebra de linha */
+    justify-content: center;   /* Centraliza os cards */
+    gap: 20px;                 /* Espaço entre os cards */
 }
 
 .projetos .card {
-    background-color: #1e1e1e;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    max-width: 300px;
-    text-align: left;
-    animation: fadeInUp 1s ease forwards;
-    opacity: 0;
+    background-color: #1e1e1e; /* Fundo escuro para o card */
+    border-radius: 10px;       /* Bordas arredondadas */
+    overflow: hidden;          /* Esconde conteúdo que ultrapassar o card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animações suaves */
+    width: 100%;               /* Ocupa toda a largura disponível */
+    max-width: 300px;          /* Largura máxima do card */
+    text-align: left;          /* Alinha o conteúdo à esquerda */
+    animation: fadeInUp 1s ease forwards; /* Animação de entrada */
+    opacity: 0;                /* Começa invisível */
 }
 
 .projetos .card img {
-    width: 100%;
-    height: auto;
+    width: 100%;               /* Imagem ocupa toda a largura do card */
+    height: auto;              /* Altura automática para manter proporção */
 }
 
 .projetos .card h3 {
-    color: #bb86fc;
-    font-size: 1.5em;
-    margin: 15px;
+    color: #bb86fc;            /* Cor roxa para o título do projeto */
+    font-size: 1.5em;          /* Tamanho do título */
+    margin: 15px;              /* Espaço ao redor */
 }
 
 .projetos .card p {
-    color: #ccc;
-    font-size: 1em;
-    margin: 15px;
+    color: #ccc;               /* Cor cinza clara para o texto */
+    font-size: 1em;            /* Tamanho da fonte */
+    margin: 15px;              /* Espaço ao redor */
 }
 
 .projetos .tags {
-    margin: 15px;
+    margin: 15px;              /* Espaço ao redor das tags */
 }
 
 .tag {
-    display: inline-block;
-    background-color: #bb86fc;
-    color: #121212;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9em;
-    margin-right: 5px;
+    display: inline-block;     /* Permite aplicar padding e margens */
+    background-color: #bb86fc; /* Cor de fundo roxa */
+    color: #121212;            /* Cor do texto escura */
+    padding: 5px 10px;         /* Espaçamento interno */
+    border-radius: 5px;        /* Bordas arredondadas */
+    font-size: 0.9em;          /* Tamanho da fonte */
+    margin-right: 5px;         /* Espaço entre as tags */
 }
 
 .projetos .card a {
-    display: block;
-    background-color: #bb86fc;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    text-decoration: none;
-    transition: background 0.3s, color 0.3s;
-    border-radius: 0 0 10px 10px;
+    display: block;            /* Ocupa toda a largura */
+    background-color: #bb86fc; /* Cor de fundo roxa */
+    color: white;              /* Cor do texto */
+    text-align: center;        /* Centraliza o texto */
+    padding: 10px;             /* Espaçamento interno */
+    text-decoration: none;     /* Remove sublinhado */
+    transition: background 0.3s, color 0.3s; /* Transições suaves */
+    border-radius: 0 0 10px 10px; /* Bordas arredondadas na parte inferior */
 }
 
 .projetos .card a:hover {
-    background-color: white;
-    color: #121212;
+    background-color: white;   /* Cor de fundo ao passar o mouse */
+    color: #121212;            /* Cor do texto ao passar o mouse */
 }
 
 .projetos .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
 }
+
 
 
 
 @keyframes fadeInUp {
     from {
-        transform: translateY(20px);
-        opacity: 0;
+        transform: translateY(20px); /* Começa deslocado para baixo */
+        opacity: 0;                  /* Invisível */
     }
 
     to {
-        transform: translateY(0);
-        opacity: 1;
+        transform: translateY(0);    /* Volta à posição original */
+        opacity: 1;                  /* Visível */
     }
 }
 
-@media (max-width: 768px) {
-    .projetos .container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-
+/* Media query para telas com largura até 768px */
 @media (max-width: 768px) {
     .menu li {
-        display: block;
-        margin: 10px 0;
+        display: block;        /* Empilha os itens do menu */
+        margin: 10px 0;        /* Espaço vertical entre eles */
     }
 
     .hero {
-        height: auto;
-        padding: 30px 10px;
+        height: auto;          /* Altura automática para se ajustar ao conteúdo */
+        padding: 30px 10px;    /* Reduz o espaçamento interno */
     }
 
     .hero img {
-        width: 100px;
+        width: 100px;          /* Reduz o tamanho da imagem */
         height: 100px;
     }
 
     .projetos .container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Empilha os cards verticalmente */
+        align-items: center;    /* Centraliza os cards */
     }
 }
+
 
 footer {
     background-color: #1f1f1f;
