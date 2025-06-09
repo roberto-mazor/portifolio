@@ -32,4 +32,23 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     window.open(url, '_blank');
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+
+  toggleButton.addEventListener('click', () => {
+    menu.classList.toggle('show');
+  });
+
+  const menuLinks = menu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.getComputedStyle(toggleButton).display !== 'none') {
+        menu.classList.remove('show');
+      }
+    });
+  });
+});
+
+
 
