@@ -316,6 +316,8 @@ section {
   }
 }
 
+/* seção formação */
+
 .formacao {
   background-color: #1e1e1e; /* Cor de fundo escura */
   color: white; /* Cor padrão do texto */
@@ -344,14 +346,14 @@ section {
   top: 0;
   bottom: 0;
   left: 50%; /* Centraliza horizontalmente */
-  margin-left: -3px; /* Compensa metade da largura da linha */
+  margin-left: 5px; /* Compensa metade da largura da linha */
 }
 
 .timeline-item {
   padding: 20px 30px;
   position: relative;
   background-color: inherit;
-  width: 50%; /* Cada item ocupa metade da largura */
+  width: 60%; /* Cada item ocupa metade da largura */
 }
 
 .timeline-item::after {
@@ -430,6 +432,8 @@ section {
     left: 10px; /* Reposiciona o ícone */
   }
 }
+
+/* Seção experiencia */
 
 .experiencia {
   background-color: #121212; /* Cor de fundo escura */
