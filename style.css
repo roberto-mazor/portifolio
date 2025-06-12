@@ -511,16 +511,6 @@ section {
   transform: translateY(-5px); /* Eleva o card levemente ao passar o mouse */
 }
 
-.exp-icon {
-  flex-shrink: 0; /* Impede que o ícone encolha */
-  margin-right: 20px; /* Espaço entre o ícone e o conteúdo */
-}
-
-.exp-icon img {
-  width: 50px; /* Largura do ícone */
-  height: 50px; /* Altura do ícone */
-}
-
 .exp-content h3 {
   color: #bb86fc; /* Cor roxa para o título da experiência */
   margin-top: 0; /* Remove margem superior */
