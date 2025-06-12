@@ -494,7 +494,7 @@ section {
 }
 
 .exp-card {
-  display: flex; /* Layout em linha para ícone e conteúdo */
+  justify-content: center /* Alinhar o conteúdo horizontalmente no centro de um contêiner flexível. */
   align-items: flex-start; /* Alinha os itens ao topo */
   background-color: #1e1e1e; /* Fundo escuro para o card */
   border-radius: 10px; /* Bordas arredondadas */
