@@ -331,6 +331,7 @@ section {
   margin-bottom: 40px; /* Espaço abaixo do título */
 }
 
+
 .timeline {
   position: relative; /* Necessário para posicionar a linha central */
   max-width: 800px; /* Largura máxima da timeline */
@@ -356,6 +357,50 @@ section {
   width: 60%; /* Cada item ocupa metade da largura */
 }
 
+/* Cursos complentares */
+
+.cursos-complementares {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.cursos-complementares h3 {
+  color: #bb86fc;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+}
+
+.cursos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.curso-card {
+  background-color: #333;
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.curso-card h4 {
+  color: #bb86fc;
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.curso-card p {
+  font-size: 0.95em;
+  margin: 0;
+}
+
+/* final curso completares */
+
+
 .timeline-item::after {
   content: ""; /* Cria o ponto na linha central */
   position: absolute;
@@ -370,11 +415,11 @@ section {
 }
 
 .timeline-item:nth-child(odd) {
-  left: 0; /* Itens ímpares à esquerda */
+  left: -3%; /* Itens ímpares à esquerda */
 }
 
 .timeline-item:nth-child(even) {
-  left: 42.5%; /* Itens pares à direita (ajustado para centralizar) */
+  left: 45%; /* Itens pares à direita (ajustado para centralizar) */
 }
 
 .timeline-item .timeline-icon {
